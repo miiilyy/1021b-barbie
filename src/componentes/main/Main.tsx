@@ -15,6 +15,14 @@ export default function Main(){
              chegam à Terra. Os robôs possuem a capacidade de se transformarem em diferentes objetos mecânicos enquanto buscam a chave do poder supremo com a ajuda do jovem Sam."
                     imagem="/250px-Transformers-poster.jpg"
                     />
+                     <Filme titulo="Transformers" sinopse="O destino da humanidade está em jogo quando duas raças de robôs, os Autobots e os vilões Decepticons,
+             chegam à Terra. Os robôs possuem a capacidade de se transformarem em diferentes objetos mecânicos enquanto buscam a chave do poder supremo com a ajuda do jovem Sam."
+                    imagem="/250px-Transformers-poster.jpg"
+                    />
+                     <Filme titulo="Transformers" sinopse="O destino da humanidade está em jogo quando duas raças de robôs, os Autobots e os vilões Decepticons,
+             chegam à Terra. Os robôs possuem a capacidade de se transformarem em diferentes objetos mecânicos enquanto buscam a chave do poder supremo com a ajuda do jovem Sam."
+                    imagem="/250px-Transformers-poster.jpg"
+                    />
 
         </main>
     )

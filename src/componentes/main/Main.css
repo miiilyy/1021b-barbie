@@ -1,5 +1,8 @@
 .content-main{
     padding: 50px;
-    display: flex;
-    gap:15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 30px;
+    row-gap:30px ;
+    justify-content: center;
 }
