@@ -1,8 +1,28 @@
+import { useState } from "react";
 import Filme from "../filme/Filme";
 import './Main.css'
+type FilmesType ={
+    titulo:string
+    sinpse:string
+    imagem:string
+}
 export default function Main(){
+    //Hook
+    const [texto,setTexto] = useState("Guilherme")
+        function mudaTexto(e:React.ChangeEvent<HTMLInputElement>){
+            console.log(e.target.value)
+            setTexto ("Tere")
+        }
     return(
-        <main className="content-main">
+        <>
+        <div className="pesquisa">
+            <p>Buscar Filme</p>
+    <input className='barrapesquisa' type='text' onChange={mudaTexto}/>
+    <div>
+    <p className='texto_digitado'>pesquisa:{texto}</p>
+    </div>
+    </div>
+    <main className="content-main"> 
             <Filme titulo="Barbie" sinopse="Depois de ser expulsa da 
                     Barbieland por ser uma boneca 
                     de aparência menos do que 
@@ -25,6 +45,8 @@ export default function Main(){
                     />
 
         </main>
+    </>
     )
 }
+
 

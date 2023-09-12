@@ -1,9 +1,6 @@
 import './Header.css'
 function Header(){
-    let texto="Guilherme"
-    function mudaTexto(){
-        texto = "terenciani"
-    }
+
     return(
         <>
         <header>
@@ -12,9 +9,7 @@ function Header(){
             </div>
             <nav>
                 <ul>
-                    <li>
-                        <input className='barra' type='text'/>
-                    </li>
+                    
                     <li>
                         <a href="#">Página inicial</a>
                     </li>
@@ -31,10 +26,7 @@ function Header(){
             </nav>
 
         </header>
-        <div>
-
-            <p className='texto_digitado'>pesquisa:{texto}</p>
-        </div>
+      
         </>
     )
 }
