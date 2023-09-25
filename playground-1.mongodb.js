@@ -185,9 +185,8 @@
 //     }
 // )
 
-db.createCollection("cake");
-
 use("db_patissier");
+db.createCollection("cake");
 db.cake.insertMany([
 {
     _id:ObjectId ("111111111111"), 
@@ -223,13 +222,13 @@ db.cake.insertMany([
 },
 {
     _id:ObjectId ("222222222222"), 
-    nome: "Bolo de Cenoura", 
+    nome: "Bolo de Maracuja", 
     peso: "1.950Kg", 
     preco: 70.00, 
     ingredientes:[
        {
         nome: "ovo",
-        quantidade: 4
+        quantidade: "4 ovos"
        },
        {
         nome: "acucar",
@@ -240,8 +239,8 @@ db.cake.insertMany([
         quantidade: "200ml"
        },
        {
-        nome: "cenoura",
-        quantidade: "2 cenouras medias"
+        nome: "maracuja",
+        quantidade: "2 maracuja medios"
        },
        {
         nome: "farinha de trigo",
@@ -255,7 +254,7 @@ db.cake.insertMany([
 },
 {
     _id:ObjectId ("333333333333"), 
-    nome: "Bolo de Limão", 
+    nome: "Bolo de Morango", 
     peso: "950g", 
     preco:60.00, 
     ingredientes:[
@@ -272,8 +271,8 @@ db.cake.insertMany([
         quantidade: "200ml"
        },
        {
-        nome: "limão",
-        quantidade: "1/2 xicara de suco de limão"
+        nome: "morango",
+        quantidade: "1/2 xicara de suco de morango"
        },
        {
         nome: "farinha de trigo",
@@ -287,7 +286,7 @@ db.cake.insertMany([
 },
 {
     _id:ObjectId ("444444444444"), 
-    nome: "Bolo de Trigo", 
+    nome: "Bolo de Limão", 
     peso: "500g", 
     preco:40.00, 
     ingredientes:[
@@ -300,7 +299,7 @@ db.cake.insertMany([
         quantidade: "2 xicaras"
        },
        {
-        nome: "leite",
+        nome: "limão",
         quantidade: "200ml"
        },
        {
@@ -315,8 +314,45 @@ db.cake.insertMany([
 }]
 )
 use("db_patissier")
-db.cake.deleteMany({_id:ObjectId("65008332649218fb41095b8a")});
+db.cake.deleteMany({_id:ObjectId("343434343434343434343434")});
 
+use("db_patissier");
+db.cake.find({}, {nome:true,preco:true});
+
+use("db_patissier");
+db.cake.find({preco: {$lte:70}}, {nome:true, preco:true});
+
+use("db_patissier");
+db.cake.updateOne(
+{_id:ObjectId("343434343434343434343434")},
+{
+$set:{
+nome: "Bolo de Maracuja",
+peso: "1.950kg",
+},
+$push: {
+ingredientes: {
+nome: "maracuja",
+quantidade: "2 maracuja medios"
+},
+},
+}
+)
+use("db_patissier");
+db.cake.updateOne(
+{_id:ObjectId("323232323232323232323232"), "ingredientes.nome": "acucar"},
+{
+$set:{
+"ingredientes.$.nome":"Ovo",
+"ingredientes.$.quantidade":"3 ovos"
+},
+}
+)
+
+
+
+
+ 
 
 
 
