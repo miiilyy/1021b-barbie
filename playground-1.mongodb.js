@@ -185,134 +185,39 @@
 //     }
 // )
 
-use("db_patissier");
-db.createCollection("cake");
+use("db_Portifolio");
+db.createCollection("Trabalho");
+db.createCollection("Trabalho");
+
 db.cake.insertMany([
 {
     _id:ObjectId ("111111111111"), 
-    nome: "Bolo de Chocolate", 
-    peso: "1,350Kg", 
-    preco:99.70, 
-    ingredientes:[
-       {
-        nome: "ovo",
-        quantidade: 4
-       },
-       {
-        nome: "acucar",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "leite",
-        quantidade: "200ml"
-       },
-       {
-        nome: "chocolate",
-        quantidade: "1 xicara"
-       },
-       {
-        nome: "farinha de trigo",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "fermento",
-        quantidade: "1 colher de sopa"
-       }
-    ] 
+    titulo: "Libra", 
+    Introdução: " Curso de libras intermediario. Este curso tem o objetivo de oferecer a toda comunidade um conhecimento intermediário sobre essa língua, que é  reconhecida oficialmente no Brasil"
 },
 {
     _id:ObjectId ("222222222222"), 
-    nome: "Bolo de Maracuja", 
-    peso: "1.950Kg", 
-    preco: 70.00, 
-    ingredientes:[
-       {
-        nome: "ovo",
-        quantidade: "4 ovos"
-       },
-       {
-        nome: "acucar",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "leite",
-        quantidade: "200ml"
-       },
-       {
-        nome: "maracuja",
-        quantidade: "2 maracuja medios"
-       },
-       {
-        nome: "farinha de trigo",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "fermento",
-        quantidade: "1 colher de sopa"
-       }
-    ] 
+    titulo: "Trabalho de Bairro Inteligente", 
+    Introdução: "Trabalho onde comparamos um bairro habitual com um inteligente"
 },
 {
     _id:ObjectId ("333333333333"), 
-    nome: "Bolo de Morango", 
-    peso: "950g", 
-    preco:60.00, 
-    ingredientes:[
-       {
-        nome: "ovo",
-        quantidade: 4
-       },
-       {
-        nome: "acucar",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "leite",
-        quantidade: "200ml"
-       },
-       {
-        nome: "morango",
-        quantidade: "1/2 xicara de suco de morango"
-       },
-       {
-        nome: "farinha de trigo",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "fermento",
-        quantidade: "1 colher de sopa"
-       }
-    ] 
+    Titulo: "Robótica",
+    Introdução:"Software Lego Mindstorm EV3  e suas principais funcionalidades. Entendendo sobre motores, sensores para detecção de obstáculos e comutação." 
+
 },
-{
-    _id:ObjectId ("444444444444"), 
-    nome: "Bolo de Limão", 
-    peso: "500g", 
-    preco:40.00, 
-    ingredientes:[
-       {
-        nome: "ovo",
-        quantidade: 4
-       },
-       {
-        nome: "acucar",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "limão",
-        quantidade: "200ml"
-       },
-       {
-        nome: "farinha de trigo",
-        quantidade: "2 xicaras"
-       },
-       {
-        nome: "fermento",
-        quantidade: "1 colher de sopa"
-       }
     ] 
-}]
 )
+
+
+
+
+
+
+
+
+
+
 use("db_patissier")
 db.cake.deleteMany({_id:ObjectId("343434343434343434343434")});
 
